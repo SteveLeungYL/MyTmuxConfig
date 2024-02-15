@@ -2,31 +2,19 @@
 
 My tmux configuration.
 
-### Custom keymappings:
-
-```
-# Custom ones
-Ctrl-<h,l>: Switch panel in the same window.
-Shift-Option-<h,l>: Switch window in the same session.
-
-# Default ones
-Ctrl + b + %: Split pane vertically.
-Ctrl + b + ": Split pane horizontally.
-Ctrl + b + x: Close the current pane.
-```
-
-### Setup
+Using the on-my-tmux configuration. 
 
 ```bash
-# Install tmux
-sudo apt install tmux
-# Install TPM Plugin Manager.
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# Copy the current config to the user directory.
-cp ./tmux.conf ~/.tmux.conf
-# Reload the tmux env
-# Go to one tmux env.
-tmux new-session -s test
-tmux source ~/.tmux.conf
-<Ctrl-b> + I # Type Control-b (tmux-prefix), followed by capital I to install the Plugin.
+cd
+git clone https://github.com/gpakosz/.tmux.git
+ln -s -f .tmux/.tmux.conf
 ```
+
+Download this repo, export the tmux local config to the user folder: 
+
+```bash
+cd
+git clone git@github.com:SteveLeungYL/MyTmuxConfig.git .tmux_myconfig
+ln -s -f .tmux_myconfig/.tmux.conf.local
+```
+
