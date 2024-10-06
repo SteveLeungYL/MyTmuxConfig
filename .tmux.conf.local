@@ -363,11 +363,16 @@ tmux_conf_copy_to_os_clipboard=true
 
 # start with mouse mode enabled
 set -g mouse on
+unbind -T copy-mode MouseDragEnd1Pane
+unbind -T copy-mode-vi MouseDragEnd1Pane
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 set -g status-keys vi
 set -g mode-keys vi
+
+# for meta left/right to jump between words.
+#set-window-option -g xterm-keys on
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
